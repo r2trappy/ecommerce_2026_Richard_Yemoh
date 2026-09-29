@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #000;
+    background: #fff;
+}
+
+a {
+    color: #000;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 20px;
+    border-bottom: 1px solid #000;
+    flex-wrap: wrap;
+}
+
+.site-header .logo a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.search-form {
+    display: flex;
+    gap: 6px;
+}
+
+.search-form input {
+    padding: 6px;
+    border: 1px solid #000;
+}
+
+.search-form button {
+    padding: 6px 12px;
+    border: 1px solid #000;
+    background: #fff;
+    cursor: pointer;
+}
+
+.main-nav {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-left: auto;
+}
+
+.main-nav a {
+    text-decoration: underline;
+}
+
+.site-main {
+    display: flex;
+    gap: 24px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.home-content {
+    flex: 1;
+}
+
+.sidebar {
+    width: 200px;
+    border: 1px solid #000;
+    padding: 12px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+}
+
+.sidebar li {
+    margin-bottom: 6px;
+}
+
+.form-page, .account-page {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    padding: 20px;
+}
+
+.form-page label {
+    display: block;
+    margin-top: 12px;
+}
+
+.form-page input, .form-page select {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    border: 1px solid #000;
+}
+
+.form-page button {
+    margin-top: 16px;
+    padding: 8px 14px;
+    background: #fff;
+    border: 1px solid #000;
+    cursor: pointer;
+    width: 100%;
+}
+
+.field-error {
+    color: #000;
+    font-size: 13px;
+    font-style: italic;
+    display: block;
+}
+
+.alert {
+    border: 1px solid #000;
+    padding: 8px 12px;
+    margin-bottom: 14px;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 14px;
+    border-top: 1px solid #000;
+    font-size: 13px;
+}
