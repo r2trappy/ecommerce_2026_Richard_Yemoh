@@ -1,6 +1,5 @@
 <?php
-// Model base class — every Model class extends this.
-// Only the connection lives here. No SQL, no HTML, no output.
+
 
 class Database {
     protected $conn;
