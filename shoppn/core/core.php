@@ -1,6 +1,5 @@
 <?php
-// Included on every page. Session, timezone, shared helpers.
-// No business logic, no SQL, no HTML output here.
+
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
