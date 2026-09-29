@@ -1,5 +1,3 @@
-// Client-side validation — the server (actions/*.php) validates again independently.
-
 function showError(id, message) {
     const el = document.getElementById(id);
     if (el) el.textContent = message;
