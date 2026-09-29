@@ -1,6 +1,4 @@
--- shoppn database schema
--- Tasks 1-4: customer, products, brands, categories, cart
--- orders/orderdetails included now so later tasks don't need a migration
+
 
 CREATE TABLE IF NOT EXISTS brands (
   brand_id INT AUTO_INCREMENT PRIMARY KEY,
