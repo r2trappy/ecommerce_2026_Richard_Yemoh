@@ -1,7 +1,6 @@
 <?php
 require_once __DIR__ . '/../classes/ProductClass.php';
 
-// Controller for product-related data. Views call this, never the Model directly.
 class ProductController {
     private $productModel;
 
