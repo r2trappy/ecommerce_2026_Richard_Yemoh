@@ -66,6 +66,6 @@ CREATE TABLE IF NOT EXISTS orderdetails (
   FOREIGN KEY (product_id) REFERENCES shoppn_products(product_id)
 );
 
--- A couple of starter rows so the site isn't empty when testing
+
 INSERT INTO brands (brand_name) VALUES ('Generic'), ('Nike'), ('Samsung');
 INSERT INTO categories (cat_name) VALUES ('Uncategorized'), ('Electronics'), ('Clothing');
