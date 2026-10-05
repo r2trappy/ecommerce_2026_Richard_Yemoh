@@ -1,7 +1,3 @@
--- shoppn database schema
--- Tasks 1-4: customer, products, brands, categories, cart
--- orders/orderdetails included now so later tasks don't need a migration
-
 CREATE TABLE IF NOT EXISTS brands (
   brand_id INT AUTO_INCREMENT PRIMARY KEY,
   brand_name VARCHAR(100) NOT NULL
@@ -68,6 +64,5 @@ CREATE TABLE IF NOT EXISTS orderdetails (
   FOREIGN KEY (product_id) REFERENCES shoppn_products(product_id)
 );
 
--- A couple of starter rows so the site isn't empty when testing
 INSERT INTO brands (brand_name) VALUES ('Generic'), ('Nike'), ('Samsung');
 INSERT INTO categories (cat_name) VALUES ('Uncategorized'), ('Electronics'), ('Clothing');

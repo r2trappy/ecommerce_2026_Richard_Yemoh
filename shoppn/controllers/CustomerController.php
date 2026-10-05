@@ -1,7 +1,6 @@
 <?php
 require_once __DIR__ . '/../classes/CustomerClass.php';
 
-// Controller: traffic director. No SQL, no echo, no header() here.
 class CustomerController {
     private $customerModel;
 

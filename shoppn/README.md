@@ -14,3 +14,7 @@ controllers/, Core in core/, Actions in actions/).
 - Task 2: Folder structure & core files
 - Task 3: Customer registration
 - Task 4: Customer login & access control
+- Task 5: Add brand (admin)
+- Task 6: Edit brand (admin)
+- Task 7: Add category (admin)
+- Task 8: Edit category (admin)

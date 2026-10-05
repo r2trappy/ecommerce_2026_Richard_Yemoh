@@ -1,7 +1,6 @@
 <?php
 require_once __DIR__ . '/../core/db_class.php';
 
-// Model: all customer-related SQL lives here. No echo, no $_POST, no HTML.
 class CustomerClass extends Database {
 
     public function emailExists($email) {
