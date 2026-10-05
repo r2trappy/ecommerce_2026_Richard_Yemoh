@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../core/db_class.php';
 
+
 class CustomerClass extends Database {
 
     public function emailExists($email) {

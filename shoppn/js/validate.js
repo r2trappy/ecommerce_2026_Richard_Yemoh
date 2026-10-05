@@ -1,4 +1,3 @@
-
 function showError(id, message) {
     const el = document.getElementById(id);
     if (el) el.textContent = message;

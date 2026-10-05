@@ -10,10 +10,16 @@
 <header class="site-header">
     <div class="logo"><a href="<?php echo base_url(); ?>index.php">Shoppn</a></div>
 
+    <form class="search-form" action="<?php echo base_url(); ?>views/search_results.php" method="GET">
+        <input type="text" name="user_query" placeholder="Search products...">
+        <button type="submit">Search</button>
+    </form>
+
     <nav class="main-nav">
         <?php if (is_admin()): ?>
             <a href="<?php echo base_url(); ?>views/admin/brand.php">Brands</a>
             <a href="<?php echo base_url(); ?>views/admin/category.php">Categories</a>
+            <a href="<?php echo base_url(); ?>views/admin/product.php">Products</a>
         <?php endif; ?>
 
         <?php if (is_logged_in()): ?>
