@@ -8,6 +8,6 @@ require_once __DIR__ . '/layout/sidebar.php';
         <?php unset($_SESSION['error']); ?>
     <?php endif; ?>
     <h1>Welcome to Shoppn</h1>
-    <p>Browse categories and brands in the sidebar. Product listings are coming in a later task.</p>
+    <p>Browse categories and brands in the sidebar.</p>
 </div>
 <?php require_once __DIR__ . '/layout/footer.php'; ?>
