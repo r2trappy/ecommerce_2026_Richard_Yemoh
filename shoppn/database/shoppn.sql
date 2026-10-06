@@ -1,5 +1,3 @@
-
-
 CREATE TABLE IF NOT EXISTS brands (
   brand_id INT AUTO_INCREMENT PRIMARY KEY,
   brand_name VARCHAR(100) NOT NULL
@@ -65,7 +63,6 @@ CREATE TABLE IF NOT EXISTS orderdetails (
   FOREIGN KEY (order_id) REFERENCES orders(order_id),
   FOREIGN KEY (product_id) REFERENCES shoppn_products(product_id)
 );
-
 
 INSERT INTO brands (brand_name) VALUES ('Generic'), ('Nike'), ('Samsung');
 INSERT INTO categories (cat_name) VALUES ('Uncategorized'), ('Electronics'), ('Clothing');

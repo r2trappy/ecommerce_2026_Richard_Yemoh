@@ -1,6 +1,5 @@
 <?php
 
-
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -45,10 +44,8 @@ function require_admin() {
     }
 }
 
-// Works whether the site sits at the web root or in a subfolder (e.g. /~user/shoppn/)
 function base_url() {
     $script = $_SERVER['SCRIPT_NAME'];
-    // Find the position of known sub-folders (views/, actions/) and strip back to the project root
     $root = preg_replace('#(views|actions)/.*$#', '', $script);
     $root = preg_replace('#/[^/]*\.php$#', '/', $root);
     return $root;

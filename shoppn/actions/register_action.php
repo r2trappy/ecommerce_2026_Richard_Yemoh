@@ -6,7 +6,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     redirect(base_url() . 'views/register.php');
 }
 
-
 $name    = trim(strip_tags($_POST['name'] ?? ''));
 $email   = trim(strip_tags($_POST['email'] ?? ''));
 $pass    = $_POST['pass'] ?? '';
