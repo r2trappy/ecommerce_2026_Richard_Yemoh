@@ -61,4 +61,51 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+    const productForm = document.getElementById('product-form');
+    if (productForm) {
+        const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+        const maxSize = 2 * 1024 * 1024;
+        const imageInput = document.getElementById('product_image');
+
+        function checkImage() {
+            clearErrors(['image-error']);
+            if (imageInput.files.length === 0) {
+                return true;
+            }
+            const file = imageInput.files[0];
+            if (allowedTypes.indexOf(file.type) === -1) {
+                showError('image-error', 'Only JPG, PNG, GIF and WEBP images are allowed.');
+                return false;
+            }
+            if (file.size > maxSize) {
+                showError('image-error', 'The image must be 2MB or smaller.');
+                return false;
+            }
+            return true;
+        }
+
+        imageInput.addEventListener('change', checkImage);
+
+        productForm.addEventListener('submit', function (e) {
+            clearErrors(['title-error', 'price-error', 'image-error']);
+            let valid = true;
+            const title = document.getElementById('product_title').value.trim();
+            const price = parseFloat(document.getElementById('product_price').value);
+
+            if (title.length < 2) {
+                showError('title-error', 'Please enter a product title.');
+                valid = false;
+            }
+            if (isNaN(price) || price <= 0) {
+                showError('price-error', 'Please enter a price greater than 0.');
+                valid = false;
+            }
+            if (!checkImage()) {
+                valid = false;
+            }
+            if (!valid) {
+                e.preventDefault();
+            }
+        });
+    }
 });
