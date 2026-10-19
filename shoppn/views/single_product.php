@@ -33,7 +33,7 @@ if (!$product) {
         <p><strong>Brand:</strong> <?php echo htmlspecialchars($product['brand_name']); ?></p>
         <p><strong>Description:</strong><br><?php echo nl2br(htmlspecialchars($product['product_desc'])); ?></p>
         <p><strong>Keywords:</strong> <?php echo htmlspecialchars((string)$product['product_keywords']); ?></p>
-        <p><a class="btn-link" href="<?php echo base_url(); ?>index.php?add_cart=<?php echo (int)$product['product_id']; ?>">Add to Cart</a></p>
+        <p><a class="btn-link" href="<?php echo base_url(); ?>actions/add_to_cart_action.php?add_cart=<?php echo (int)$product['product_id']; ?>">Add to Cart</a></p>
     </div>
 </section>
 

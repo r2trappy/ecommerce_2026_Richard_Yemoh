@@ -108,4 +108,19 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+    const updateForm = document.getElementById('update-form');
+    if (updateForm) {
+        updateForm.addEventListener('submit', function (e) {
+            clearErrors(['qty-error']);
+            const inputs = document.querySelectorAll('input.qty-input');
+            for (let i = 0; i < inputs.length; i++) {
+                const v = inputs[i].value.trim();
+                if (!/^[0-9]+$/.test(v) || parseInt(v, 10) < 1 || parseInt(v, 10) > 99) {
+                    showError('qty-error', 'Each quantity must be a whole number from 1 to 99.');
+                    e.preventDefault();
+                    return;
+                }
+            }
+        });
+    }
 });

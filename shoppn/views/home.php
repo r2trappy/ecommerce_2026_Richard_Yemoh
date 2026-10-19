@@ -17,7 +17,6 @@ if ($catId && $catId > 0) {
     $products = $controller->getFeaturedProducts(6);
 }
 
-$cartNotice = isset($_GET['add_cart']);
 ?>
 <?php require_once __DIR__ . '/layout/header.php'; ?>
 <?php require_once __DIR__ . '/layout/sidebar.php'; ?>
@@ -26,10 +25,6 @@ $cartNotice = isset($_GET['add_cart']);
     <?php if (!empty($_SESSION['error'])): ?>
         <div class="alert"><?php echo htmlspecialchars($_SESSION['error']); ?></div>
         <?php unset($_SESSION['error']); ?>
-    <?php endif; ?>
-
-    <?php if ($cartNotice): ?>
-        <div class="alert">The cart is not available yet.</div>
     <?php endif; ?>
 
     <h1><?php echo $heading; ?></h1>

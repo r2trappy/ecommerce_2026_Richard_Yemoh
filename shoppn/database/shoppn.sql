@@ -35,14 +35,15 @@ CREATE TABLE IF NOT EXISTS shoppn_products (
   FOREIGN KEY (product_brand) REFERENCES brands(brand_id)
 );
 
-CREATE TABLE IF NOT EXISTS cart (
+CREATE TABLE IF NOT EXISTS shoppn_cart (
   cart_id INT AUTO_INCREMENT PRIMARY KEY,
   p_id INT NOT NULL,
   customer_id INT DEFAULT NULL,
   ip_add VARCHAR(45) NOT NULL,
   qty INT NOT NULL DEFAULT 1,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (p_id) REFERENCES shoppn_products(product_id)
+  UNIQUE KEY uniq_item (p_id, ip_add),
+  FOREIGN KEY (p_id) REFERENCES shoppn_products(product_id) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS orders (

@@ -1,3 +1,10 @@
+<?php
+require_once __DIR__ . '/../../controllers/CartController.php';
+$cartController = new CartController();
+$cartIp = get_ip();
+$cartCount = $cartController->getCartCount($cartIp);
+$cartTotal = $cartController->getCartTotal($cartIp);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,4 +39,11 @@
         <?php endif; ?>
     </nav>
 </header>
+<div class="cart-bar">
+    Shopping Cart &mdash; Total Items: <?php echo (int)$cartCount; ?> | Total Price: GH₵ <?php echo number_format($cartTotal, 2); ?> | <a href="<?php echo base_url(); ?>views/cart.php">Go to Cart</a>
+</div>
+<?php if (!empty($_SESSION['cart_msg'])): ?>
+    <div class="alert cart-msg"><?php echo htmlspecialchars($_SESSION['cart_msg']); ?></div>
+    <?php unset($_SESSION['cart_msg']); ?>
+<?php endif; ?>
 <main class="site-main">
